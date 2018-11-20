@@ -1,0 +1,46 @@
+h1 {
+    font-weight: bolder;    
+}
+img {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+}
+
+.nav-bar {
+    background: #32c69a;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.nav-bar h1, h4 {
+    color:white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 80%;
+}
+
+.fa-github, .fa-linkedin {
+    background-color: white;
+    color: grey;
+}
+
+.li-skills {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: white;
+    background: grey;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
+  }
