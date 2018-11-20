@@ -1,0 +1,25 @@
+{
+  "name": "devpool",
+  "version": "1.0.0",
+  "description": "Online recruitment platform for Software Developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deelowtrayne/devpool.git"
+  },
+  "author": "Luvuyo Sono, Zubair Adams, Lihle Menzeleli and Amanda Gxagxa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deelowtrayne/devpool/issues"
+  },
+  "homepage": "https://github.com/Deelowtrayne/devpool#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6"
+  }
+}
