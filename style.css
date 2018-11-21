@@ -1,3 +1,25 @@
+@media only screen and (max-width: 860px) {
+
+    .nav-bar h1,
+    h4,
+    a {
+        font-size: 2em;
+        margin-left: 5em;
+    }
+
+    .fa-github,
+    .fa-linkedin,
+    .fa-twitter {
+        font-size: 2em;
+        margin-right: 2em;
+    }
+
+    .nav-bar img {
+        width: 10em;
+        height: 10em;
+    }
+}
+
 h1 {
     font-weight: bolder;
     margin-top: 2em;
@@ -36,6 +58,8 @@ h4 {
 
 .fa:hover {
     opacity: 0.7;
+    text-decoration: none;
+    color: grey
 }
 
 .fa-github,
@@ -63,4 +87,20 @@ h4 {
 
 .profile-bio {
     margin-top: 25em;
+}
+
+label {
+    font-weight: bolder;
+}
+
+fieldset {
+    /* display: block; */
+    margin-left: 0.8;
+    margin-right: 0.8;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+    background-color: #F5F5F5;
 }

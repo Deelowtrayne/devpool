@@ -20,37 +20,37 @@
 
 <body class="text-center">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
         <header class="masthead mb-auto">
             <div class="inner">
                 <h3 class="masthead-brand">DEVPOOL </h3>
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link active" href="#">Home</a>
                     <a class="nav-link" href="#">Find Developers</a>
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Login</a>
                 </nav>
             </div>
         </header>
 
         <main role="main" class="inner cover">
-            <div class="row">
+            <div class="row devPool">
                 <div class="col-md-5 offset-md-7" id="sign-in">
-                    <h1 class="cover-heading">Sign in</h1>
+                    <h1 class="cover-heading">Sign up</h1>
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control"   v-model="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" class="form-control" v-model='password' id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" v-show ='checked' id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" v-on:click="submit" >Submit</button>
                     </form>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <a target="_blank" href="https://luvuyosono.com">Deelowtrayne</a>, 
                     <a target="_blank" href="https://zubairadams.github.io">Zubair</a>, 
                     <a target="_blank" href="https://elihle.github.io">Lihle</a> and 
-                    <a target="_blank" href="https://amandagxagxa.github.io">Amanda</a>,
+                    <a target="_blank" href="https://amandagxagxa.github.io/AmandaGxagxa">Amanda</a>,
                 </p>
             </div>
         </footer>
@@ -77,6 +77,8 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
+    <script src='devpool.js'></script>
+    
 
 </body>
 
