@@ -20,6 +20,7 @@ const pool = new Pool({
 
 // github api setup
 const octokit = require('@octokit/rest')({
+	timeout: 0,
 	headers: {
 		accept: 'application/vnd.github.v3+json'
 	},
@@ -28,8 +29,10 @@ const octokit = require('@octokit/rest')({
 });
 
 octokit.authenticate({
-	type: 'token',
-	token: keys.github_key
+	type: 'basic',
+	// token: keys.github_key
+	username: "deelowtrayne",
+	password: "N0m@wonga10250"
 });
 
 // import services
