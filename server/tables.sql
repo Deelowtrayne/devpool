@@ -8,3 +8,13 @@ create table users (
     codewars varchar(255) not null--,
     -- linkedin not null varchar(255),
 );
+create table job_list(
+    id serial not null primary key,
+    indeed VARCHAR not null,
+    job_discription VARCHAR not null,
+    Company varchar not null,
+    Summary varchar not null,
+    Date_posted varchar not null, 
+    _Location varchar not null
+
+);
