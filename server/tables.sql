@@ -11,13 +11,13 @@ create table users (
     active_since varchar(20) not null,
     public_repos int not null default 0
 );
-create table job_list(
+create table jobs(
     id serial not null primary key,
-    indeed VARCHAR not null,
-    job_discription VARCHAR not null,
-    Company varchar not null,
-    Summary varchar not null,
-    Date_posted varchar not null, 
-    _Location varchar not null,
-    wage varchar not null 
+    indeed VARCHAR,
+    job_description VARCHAR,
+    company varchar,
+    summary varchar,
+    date_posted varchar, 
+    area varchar,
+    wage varchar  
 );
