@@ -15,6 +15,6 @@ create table job_list(
     Company varchar not null,
     Summary varchar not null,
     Date_posted varchar not null, 
-    _Location varchar not null
-
+    _Location varchar not null,
+    wage varchar not null 
 );
