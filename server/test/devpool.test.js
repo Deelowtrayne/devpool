@@ -15,8 +15,8 @@ const octokit = require('@octokit/rest')({
 octokit.authenticate({
 	type: 'basic',
 	// token: keys.github_key
-	username: 'deelowtrayne',
-	password: 'N0m@wonga10250'
+	username: 'amandagxagxa',
+	password: 'amanda25'
 });
 
 // database setup
@@ -24,7 +24,7 @@ const Pool = pg.Pool;
 const useSSL = process.env.DATABASE_URL ? true : false;
 const connectionString =
 	process.env.DATABASE_URL ||
-	'postgresql://deelowtrayne:nomawonga@localhost:5432/devpool';
+	'postgresql://amanda:coder123@localhost:5432/devpool';
 
 const pool = new Pool({
 	connectionString,
@@ -62,7 +62,7 @@ describe('Testa qha', () => {
 
 		auth.register({
 			username: 'Elihle',
-			password: 'cod3r123'
+			password: 'coder123'
 		});
 
 		auth.register({
@@ -70,7 +70,7 @@ describe('Testa qha', () => {
 			password: 'coder@123'
 		});
 
-		assert.equal(await users.all(), []);
+		assert.deepEqual(await users.all(), []);
 	});
 
 	after(async () => {
