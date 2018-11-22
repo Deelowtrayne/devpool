@@ -51,37 +51,37 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(cors());
 
-const jobs = require('../jobs.json');
+// const jobs = require('../jobs.json');
 
-(function storeData() {
-	//let jobList = JSON.parse(jobs);
-	let allPromises = [];
-	for (let job of jobs) {
-		const {
-			indeed,
-			job_description,
-			Company,
-			Summary,
-			wage,
-			area
-		} = job;
-		allPromises.push(
-			pool.query('insert into jobs(indeed, job_description, company, summary, wage, area) \
-			values ($1, $2, $3, $4, $5, $6)', [
-				indeed,
-				job_description,
-				Company,
-				Summary,
-				wage,
-				area
-			])
-		);
+// (function storeData() {
+// 	//let jobList = JSON.parse(jobs);
+// 	let allPromises = [];
+// 	for (let job of jobs) {
+// 		const {
+// 			indeed,
+// 			job_description,
+// 			Company,
+// 			Summary,
+// 			wage,
+// 			area
+// 		} = job;
+// 		allPromises.push(
+// 			pool.query('insert into jobs(indeed, job_description, company, summary, wage, area) \
+// 			values ($1, $2, $3, $4, $5, $6)', [
+// 				indeed,
+// 				job_description,
+// 				Company,
+// 				Summary,
+// 				wage,
+// 				area
+// 			])
+// 		);
 
-		Promise.all(allPromises)
-		.then(res => console.log(res))
-		.catch(err => console.log(err.stack));
-	}
-}());
+// 		Promise.all(allPromises)
+// 		.then(res => console.log(res))
+// 		.catch(err => console.log(err.stack));
+// 	}
+// }());
 
 // routes setup
 app.post('/api/users/register', routes.registerUser);
