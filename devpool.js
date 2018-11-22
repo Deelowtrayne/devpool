@@ -1,5 +1,5 @@
 let devPool = new Vue({
-  el: '.devPool'
+  el: '.devPool',
    data : {     
     // add this
     email: '',
@@ -7,7 +7,7 @@ let devPool = new Vue({
   },
   methods : {
     details : function() {
-      alert('Lets calculate!');
+      alert('lets do it');
     }
   }
 });

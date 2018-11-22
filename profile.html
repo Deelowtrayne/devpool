@@ -11,16 +11,16 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </head>
 
 <body class="text-center">
-    <div class=" container-fluid profile">
+    <div class="container-fluid profile">
         <div class="nav-bar">
             <div class="row first">
                 <div class="col-5">
@@ -29,7 +29,7 @@
 
                 <div class="col-7">
                     <h1>{{fullname}}</h1>
-                    <h4>]{{}}</h4>
+                    <h4>Web developer</h4>
                     <!-- <div class="social-links"> -->
                     <a href="#" class="fa fa-github"></a>
                     <a href="#" class="fa fa-linkedin"></a>
@@ -62,29 +62,16 @@
                     <p>
                         <fieldset>
                             <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="lihlemenz@gmail.com">
-                                </div>
-                                <label for="staticCity" class="col-sm-2 col-form-label">City</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="East London, South Africa">
-                                </div>
+                                <label for="staticEmail" v-for="email in users" v-bind:key="public_repos" class="col-sm-2 col-form-label">{{email}}</label>
+        
+                                <label for="staticCity" v-for="avatar in users" v-bind:key="public_repos" class="col-sm-2 col-form-label">avatar</label>
+                                
+                                <label for="staticActive" v-for="city in users" v-bind:key="city" class="col-sm-2 col-form-label">city</label>
 
-                                <label for="staticActive" class="col-sm-2 col-form-label">Active Since</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="active">
-                                </div>
-
-                                <label for="staticUpdate" class="col-sm-2 col-form-label">Updated</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="a few minutes ago">
-                                </div>
-
-                                <label for="staticRepos" class="col-sm-2 col-form-label">Public repos</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="greetings.herokuapp.com">
-                                </div>
+                                <label for="staticUpdate" v-for="active_since in users" v-bind:key="active_since" class="col-sm-2 col-form-label">Active Since</label>
+                                
+                                <label for="staticRepos" v-for="repos in users" v-bind:key="public_repos" class="col-sm-2 col-form-label">{{public_repos}}</label>
+                                
                             </div>
                         </fieldset>
                         <ul class="ul-skills">
@@ -106,6 +93,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="profile.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
