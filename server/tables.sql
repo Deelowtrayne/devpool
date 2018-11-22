@@ -8,7 +8,6 @@ create table users (
     email varchar(50) not null, 
     avatar varchar(255) not null, 
     city varchar(55), 
-    active_since date not null,
-    updated_at date not null,
+    active_since varchar(20) not null,
     public_repos int not null default 0
 );
