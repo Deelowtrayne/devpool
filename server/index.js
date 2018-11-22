@@ -96,6 +96,7 @@ app.use('/api/user/register', routes.registerUser);
 // port configuration
 const PORT = process.env.PORT || 4000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
 
 
@@ -103,3 +104,6 @@ app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
 =======
 app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
 >>>>>>> profile-mockup
+=======
+app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
+>>>>>>> b8511072724583c42c13dd5f73457c917e4f0e1c
