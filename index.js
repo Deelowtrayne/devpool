@@ -3,6 +3,7 @@ const app = require('express')();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
+const axios = require('axios');
 // const keys = require('../config/config');
 
 
@@ -32,8 +33,8 @@ octokit.authenticate({
 	// type: 'token',
 	// token: keys.github_key
 	type: 'basic',
-	username :'Amanda Gxagxa',
-	password :'amanda24'
+	username :'deelowtrayne',
+	password :'N0m@wonga10250'
 
 });
 
