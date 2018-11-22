@@ -1,4 +1,4 @@
 
 module.exports = {
-    github_key: '7403057e1fa94d4607b607d4992daf91a6dedcc5'
+    github_key: '2e195ca7e2bc4d8fff32fa42a9912ff979cc6757'
 }
