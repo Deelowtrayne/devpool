@@ -1,11 +1,11 @@
 @media only screen and (max-width: 860px) {
 
-    .nav-bar h1,
+    /* .nav-bar h1,
     h4,
     a {
         font-size: 2em;
         margin-left: 5em;
-    }
+    } */
 
     .fa-github,
     .fa-linkedin,
@@ -33,11 +33,12 @@ img {
     margin-top: 2em;
 }
 
-.nav-bar {
+.nav-bar{
     background: #32c69a;
     position: fixed;
     z-index: 2;
     top: 0;
+    margin: auto;
     width: 100%;
     height: 50%;
 }
