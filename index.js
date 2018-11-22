@@ -40,7 +40,7 @@ octokit.authenticate({
 
 // import services
 const authService = require('./services/authService')(pool, octokit);
-const usersService = require('./services/usersService')(pool, octokit);
+const usersService = require('./services/usersService')(pool, axios);
 
 // import routes
 const routes = require('./routes/routes')(authService, usersService);
