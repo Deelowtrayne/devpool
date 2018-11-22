@@ -28,8 +28,10 @@ const octokit = require('@octokit/rest')({
 });
 
 octokit.authenticate({
-	type: 'token',
-	token: keys.github_key
+	// type: 'token',
+	// token: keys.github_key
+	type: 'basic',
+	username :'Amanda Gxagxa'
 });
 
 // import services
@@ -49,3 +51,6 @@ app.use('/api/user/register', routes.registerUser);
 // port configuration
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
+
+
+

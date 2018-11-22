@@ -1,5 +1,5 @@
 module.exports = function (pool, github) {
-    async function getUser()
+    async function getUser(){}
     async function register(user) {
         const { username, password } = user;
         const foundUser = awaitgithub.request(`GET /users/${username}`);
