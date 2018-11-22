@@ -1,6 +1,6 @@
 @media only screen and (max-width: 860px) {
 
-    .nav-bar h1,
+    .navBar h1,
     h4,
     a {
         font-size: 2em;
@@ -14,7 +14,7 @@
         margin-right: 2em;
     }
 
-    .nav-bar img {
+    .navBar img {
         width: 10em;
         height: 10em;
     }
@@ -33,7 +33,7 @@ img {
     margin-top: 2em;
 }
 
-.nav-bar {
+.navBar {
     background: #32c69a;
     position: fixed;
     z-index: 2;
@@ -42,7 +42,7 @@ img {
     height: 50%;
 }
 
-.nav-bar h1,
+.navBar h1,
 h4 {
     color: white;
 }

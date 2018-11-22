@@ -1,4 +1,3 @@
-
 create table users (
     id serial not null primary key,
     full_name varchar(55) not null,

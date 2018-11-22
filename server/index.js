@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
 const keys = require('../config/config');
-
+const axios = require('axios');
 
 // database setup
 const Pool = pg.Pool;
@@ -34,12 +34,15 @@ octokit.authenticate({
 
 // import services
 const authService = require('./services/authService')(pool, octokit);
+const codewarsService = require('./services/codewars')(pool, axios, keys);
 
 // import routes
 const routes = require('./routes/routes')(authService);
 
 // middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 app.use(bodyParser.json());
 app.use(cors());
 
