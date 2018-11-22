@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
 const keys = require('../config/config');
-
+const axios = require('axios');
 
 // database setup
 const Pool = pg.Pool;
@@ -30,13 +30,14 @@ const octokit = require('@octokit/rest')({
 
 octokit.authenticate({
 	type: 'basic',
-	// token: keys.github_key
+	 token: keys.github_key,
 	username: "deelowtrayne",
 	password: "N0m@wonga10250"
 });
 
 // import services
 const authService = require('./services/authService')(pool, octokit);
+const codewarsService = require('./services/codewars')(pool, axios, keys);
 
 // import routes
 const routes = require('./routes/routes')(authService);

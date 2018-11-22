@@ -14,7 +14,7 @@
         margin-right: 2em;
     }
 
-    .nav-bar img {
+    .navBar img {
         width: 10em;
         height: 10em;
     }
@@ -43,7 +43,7 @@ img {
     height: 50%;
 }
 
-.nav-bar h1,
+.navBar h1,
 h4 {
     color: white;
 }
