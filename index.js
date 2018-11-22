@@ -3,7 +3,7 @@ const app = require('express')();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
-const keys = require('../config/config');
+// const keys = require('../config/config');
 
 
 // database setup
