@@ -4,14 +4,14 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
 const keys = require('../config/config');
-
+const axios = require('axios');
 
 // database setup
 const Pool = pg.Pool;
 const useSSL = process.env.DATABASE_URL ? true : false;
 const connectionString =
 	process.env.DATABASE_URL ||
-	'postgresql://zubair:coder123@localhost:5432/devpool';
+	'postgresql://amanda:coder123@localhost:5432/devpool';
 
 const pool = new Pool({
 	connectionString,
@@ -29,16 +29,24 @@ const octokit = require('@octokit/rest')({
 });
 
 octokit.authenticate({
+<<<<<<< HEAD
 	// type: 'token',
 	// token: keys.github_key
 	type: 'basic',
 	username :'Amanda Gxagxa',
 	password :'amanda24'
 
+=======
+	type: 'basic',
+	 token: keys.github_key,
+	username: "deelowtrayne",
+	password: "N0m@wonga10250"
+>>>>>>> profile-mockup
 });
 
 // import services
 const authService = require('./services/authService')(pool, octokit);
+const codewarsService = require('./services/codewars')(pool, axios, keys);
 
 // import routes
 const routes = require('./routes/routes')(authService);
@@ -87,4 +95,15 @@ app.use('/api/user/register', routes.registerUser);
 
 // port configuration
 const PORT = process.env.PORT || 4000;
+<<<<<<< HEAD
+<<<<<<< HEAD
 app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
+
+
+
+=======
+app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
+>>>>>>> profile-mockup
+=======
+app.listen(PORT, () => console.log(`App running on port ${PORT}...`));
+>>>>>>> b8511072724583c42c13dd5f73457c917e4f0e1c

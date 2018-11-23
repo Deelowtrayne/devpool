@@ -7,7 +7,7 @@ let devPool = new Vue({
   },
   methods : {
     details : function() {
-      alert('Lets calculate!');
+      alert('lets do it');
     }
   }
 });
