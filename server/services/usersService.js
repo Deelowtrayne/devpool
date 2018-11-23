@@ -1,12 +1,12 @@
-module.exports = function(pool) {
+module.exports = function (pool) {
 	async function all() {
 		try {
 			let res = await pool.query('select * from users');
 			return res.rows;
 		} catch (err) {
-            console.log(err);
-            
-        }
+			console.log(err);
+
+		}
 	}
 
 	async function one(id) {
