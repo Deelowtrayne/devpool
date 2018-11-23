@@ -29,10 +29,12 @@ const octokit = require('@octokit/rest')({
 });
 
 octokit.authenticate({
-	type: 'basic',
+	// type: 'token',
 	// token: keys.github_key
-	username: "deelowtrayne",
-	password: "N0m@wonga10250"
+	type: 'basic',
+	username :'Amanda Gxagxa',
+	password :'amanda24'
+
 });
 
 // import services

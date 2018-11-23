@@ -9,9 +9,9 @@ module.exports = function(pool) {
         }
 	}
 
-	async function one(id) {
-		const result = await pool.query('select * from users where id=$1 limit 1', [
-			id
+	async function one(username) {
+		const result = await pool.query('select * from users where username=$1 limit 1', [
+			username
 		]);
 		return result.rows[0];
 	}

@@ -4,7 +4,9 @@
   "description": "Online recruitment platform for Software Developers",
   "main": "server/index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
