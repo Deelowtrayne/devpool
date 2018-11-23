@@ -1,5 +1,6 @@
 // import dependancies
-const app = require('express')();
+const express = require('express');
+const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const pg = require('pg');
@@ -46,6 +47,7 @@ const usersService = require('./services/usersService')(pool, axios);
 const routes = require('./routes/routes')(authService, usersService);
 
 // middleware
+app.use(express.static('client'));
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
